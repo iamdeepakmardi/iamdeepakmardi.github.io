@@ -12,7 +12,7 @@ const Experience: React.FC = () => {
 
       <div className="relative border-l border-zinc-800 ml-3 space-y-16">
         {EXPERIENCE_DATA.map((job) => (
-          <div key={job.id} className="relative pl-12 group">
+          <div key={job.id} className="relative pl-6 sm:pl-12 group">
             {/* Timeline Dot */}
             <div className="absolute -left-[5px] top-2 h-[9px] w-[9px] rounded-full bg-zinc-900 border-2 border-zinc-600 transition-all group-hover:border-cyan-400 group-hover:bg-cyan-400 group-hover:shadow-[0_0_10px_rgba(34,211,238,0.5)]"></div>
             
@@ -39,15 +39,7 @@ const Experience: React.FC = () => {
               )}
             </div>
             
-            <ul className="mt-6 flex flex-wrap gap-2" aria-label="Technologies used">
-              {job.skills.map((skill) => (
-                <li key={skill}>
-                  <div className="flex items-center rounded bg-cyan-900/10 border border-cyan-900/30 px-3 py-1 text-xs font-mono font-medium text-cyan-300 hover:bg-cyan-900/20 transition-colors cursor-default">
-                    {skill}
-                  </div>
-                </li>
-              ))}
-            </ul>
+
           </div>
         ))}
       </div>

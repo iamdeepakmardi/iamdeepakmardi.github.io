@@ -1,6 +1,7 @@
 import React from 'react';
 import { HERO_DATA, SOCIAL_LINKS } from '../constants';
-import { Github, Linkedin, Twitter, Mail, MapPin } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import LocationCard from './LocationCard';
 
 const Sidebar: React.FC = () => {
   const getIcon = (iconName: string) => {
@@ -45,10 +46,7 @@ const Sidebar: React.FC = () => {
           {HERO_DATA.tagline}
         </p>
         
-        <div className="mt-6 flex items-center text-zinc-500 text-sm font-mono">
-           <MapPin className="w-4 h-4 mr-2" />
-           {HERO_DATA.location}
-        </div>
+        <LocationCard />
 
         {/* Navigation - Styled as File System */}
         <nav className="nav hidden lg:block mt-16" aria-label="In-page jump links">

@@ -2,11 +2,15 @@ import { Experience, Project, SocialLink, Education, Certification, SkillCategor
 
 export const HERO_DATA = {
   name: "Deepak Mardi",
-  title: "Software Developer - Full Stack",
-  tagline: "Architecting scalable SaaS applications with modern tech stacks.",
-  about: "Results-driven Full Stack Software Developer with 3+ years of experience in architecting and delivering scalable SaaS applications. Proven track record in leading cross-functional teams, optimizing application performance, and implementing robust DevOps practices. Expertise in MERN stack with strong foundation in system design, cloud deployment, and Agile methodologies. IIT Kharagpur alumnus.",
+  title: "Software Developer",
+  tagline: "Architecting scalable web applications with modern tech stacks.",
+  about: [
+    "I am a dedicated Software Developer with a passion for building efficient and scalable web applications. My journey in tech has been driven by a curiosity to understand how things work and a desire to create solutions that make a difference. I specialize in modern web technologies and enjoy tackling complex challenges.",
+    "My approach to development centers on writing clean, maintainable code and designing intuitive user experiences. I believe that great software is built through collaboration, continuous learning, and a keen attention to detail. I am always eager to explore new tools and methodologies to improve my craft.",
+    "When I'm not coding, I enjoy staying up-to-date with the latest industry trends and working on personal projects. I am currently looking for new opportunities to contribute my skills to a dynamic team. If you're interested in working together, feel free to connect!"
+  ],
   location: "Raipur, CG",
-  avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=400&h=400&q=100" // Keeping generic placeholder, replace if you have a specific URL
+  avatarUrl: "https://avatars.githubusercontent.com/u/67671892?s=400&u=383ccbd77e1620e342a636f3d205141bc00f1a84&v=4"
 };
 
 export const EXPERIENCE_DATA: Experience[] = [
@@ -17,7 +21,7 @@ export const EXPERIENCE_DATA: Experience[] = [
     period: "Oct 2025 – Present",
     description: [
       "Building and managing distributed microservices architecture in Javascript and Go, designing APIs and backend logic for high availability and scalability.",
-      "Developing Angular front-end interfaces, ensuring seamless integration across Epek’s platform."
+      "Developing responsive front-end interfaces using React and Angular, ensuring seamless integration across the platform."
     ],
     skills: ["Go", "JavaScript", "Angular", "Microservices"]
   },
@@ -25,12 +29,12 @@ export const EXPERIENCE_DATA: Experience[] = [
     id: 'exp-2',
     role: "Software Developer & Co-Founder",
     company: "ARCS Design Studio",
-    period: "Jan 2025 – Present",
+    period: "Jan 2025 – Oct 2025",
     description: [
-      "Led end-to-end delivery of 10+ SaaS and client projects, achieving 20% improvement in client retention.",
+      "Led end-to-end delivery of 10+ web applications and client projects, achieving 20% improvement in client retention.",
       "Architected full-stack applications using React.js, Next.js, Node.js, and MongoDB.",
-      "Collaborated directly with 10+ clients to translate complex business requirements into scalable technical solutions.",
-      "Mentored 3 junior developers through code reviews and knowledge-sharing workshops."
+      "Collaborated directly with diverse clients across Construction, E-commerce, and Landscaping sectors to translate complex business requirements into scalable technical solutions.",
+      "Mentored 3 junior developers through code reviews and one-on-one technical guidance."
     ],
     skills: ["React", "Next.js", "Node.js", "MongoDB", "Leadership"]
   },
@@ -68,32 +72,16 @@ export const PROJECTS_DATA: Project[] = [
     title: "Habitly",
     description: "A full-stack habit tracking platform with streaks, heatmaps, and real-time updates. Features subscription billing, analytics, and admin tools to support scalable revenue growth.",
     technologies: ["Next.js", "Prisma", "PostgreSQL", "Chrome Ext"],
-    imageUrl: "https://picsum.photos/600/400?random=1",
-    link: "https://github.com/belikedeep"
-  },
-  {
-    id: 'proj-2',
-    title: "Credible",
-    description: "AI-Powered Professional Networking Platform. Features an AI-driven resume parser (OpenAI API), intelligent search/recommendation engine, and secure team collaboration tools.",
-    technologies: ["React", "Python", "PostgreSQL", "OpenAI"],
-    imageUrl: "https://picsum.photos/600/400?random=2",
-    link: "https://github.com/belikedeep"
+    imageUrl: "https://res.cloudinary.com/dgvdv9xhx/image/upload/v1756144976/habitly_ykmmed.png",
+    link: "https://github.com/iamdeepakmardi"
   },
   {
     id: 'proj-3',
     title: "FeedbackSense",
-    description: "SaaS tool transforming raw customer feedback into insights via sentiment analysis. Includes secure multi-tenant system and dashboards visualizing satisfaction scores.",
+    description: "Platform transforming raw customer feedback into insights via sentiment analysis. Includes secure multi-tenant system and dashboards visualizing satisfaction scores.",
     technologies: ["Next.js", "Node.js", "OpenAI", "MongoDB"],
-    imageUrl: "https://picsum.photos/600/400?random=3",
-    link: "https://github.com/belikedeep"
-  },
-  {
-    id: 'proj-4',
-    title: "GeoApp",
-    description: "Zip Code Distance & Location API. A RESTful API for distance calculations and radius searches, optimized with geospatial queries and caching for sub-100ms response times.",
-    technologies: ["Node.js", "Express.js", "PostgreSQL", "Geospatial"],
-    imageUrl: "https://picsum.photos/600/400?random=4",
-    link: "https://github.com/belikedeep"
+    imageUrl: "https://res.cloudinary.com/dgvdv9xhx/image/upload/v1756755016/Screenshot_From_2025-09-02_00-56-58_bihdcn.png",
+    link: "https://github.com/iamdeepakmardi"
   }
 ];
 
@@ -149,12 +137,12 @@ export const SKILLS_DATA: SkillCategory[] = [
   },
   {
     name: "DevOps & Cloud",
-    skills: ["Docker", "Kubernetes", "AWS (EC2, S3)", "GitHub Actions", "Linux", "Nginx"]
+    skills: ["Docker", "AWS (EC2, S3)", "GitHub Actions", "Linux", "Nginx"]
   }
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { platform: "GitHub", url: "https://github.com/belikedeep", icon: "github" },
+  { platform: "GitHub", url: "https://github.com/iamdeepakmardi", icon: "github" },
   { platform: "LinkedIn", url: "https://linkedin.com/in/deepakmardi", icon: "linkedin" },
   { platform: "Email", url: "mailto:deepakmardi22@gmail.com", icon: "mail" }
 ];
@@ -170,7 +158,7 @@ Deepak's Stats:
 - Vibe: Architecture nerd, Microservices enthusiast, Full-stack wizard.
 - Experience: Epek Software (Current), ARCS Design Studio (Co-Founder), Tablt Pharmacy.
 - Tech Stack: MERN, Go, Python, Docker, K8s (He actually knows how to exit Vim).
-- Key Projects: Habitly, Credible, FeedbackSense.
+- Key Projects: Habitly, FeedbackSense.
 - Education: IIT Kharagpur (Smart guy alert).
 
 Rules:

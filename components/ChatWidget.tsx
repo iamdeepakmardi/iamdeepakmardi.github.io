@@ -8,7 +8,7 @@ const ChatWidget: React.FC = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: 'init',
-      text: "System initialized. AlexDev_Bot loaded. How can I assist you with Alex's profile?",
+      text: "System initialized. DeepDev_Bot loaded. How can I assist you with Deepak's profile?",
       sender: Sender.Bot,
       timestamp: Date.now()
     }
@@ -66,11 +66,10 @@ const ChatWidget: React.FC = () => {
       {/* Floating Trigger Button */}
       <button
         onClick={toggleChat}
-        className={`fixed bottom-6 right-6 z-50 flex items-center justify-center rounded-full shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 ${
-          isOpen 
-            ? 'h-10 w-10 bg-zinc-800 text-zinc-400 border border-zinc-700' 
-            : 'h-14 w-14 bg-cyan-500 text-zinc-950 hover:bg-cyan-400'
-        }`}
+        className={`fixed bottom-6 right-6 z-50 flex items-center justify-center rounded-full shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 ${isOpen
+          ? 'h-10 w-10 bg-zinc-800 text-zinc-400 border border-zinc-700'
+          : 'h-14 w-14 bg-cyan-500 text-zinc-950 hover:bg-cyan-400'
+          }`}
         aria-label="Toggle terminal"
       >
         {isOpen ? <X className="h-4 w-4" /> : <Terminal className="h-6 w-6" />}
@@ -78,22 +77,21 @@ const ChatWidget: React.FC = () => {
 
       {/* Terminal Window */}
       <div
-        className={`fixed bottom-24 right-6 z-40 w-[90vw] sm:w-[400px] bg-[#0c0c0e] border border-zinc-800 rounded-lg shadow-2xl transition-all duration-300 origin-bottom-right transform backdrop-blur-md bg-opacity-95 overflow-hidden ${
-          isOpen ? 'scale-100 opacity-100' : 'scale-90 opacity-0 pointer-events-none'
-        }`}
+        className={`fixed bottom-24 right-6 z-40 w-[90vw] sm:w-[400px] bg-[#0c0c0e] border border-zinc-800 rounded-lg shadow-2xl transition-all duration-300 origin-bottom-right transform backdrop-blur-md bg-opacity-95 overflow-hidden ${isOpen ? 'scale-100 opacity-100' : 'scale-90 opacity-0 pointer-events-none'
+          }`}
       >
         {/* Terminal Header */}
         <div className="flex items-center justify-between bg-zinc-900/80 p-3 border-b border-zinc-800">
           <div className="flex items-center space-x-2">
-             <div className="flex space-x-1.5">
-               <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
-               <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
-               <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
-             </div>
-             <div className="ml-3 text-xs font-mono text-zinc-400 flex items-center gap-1">
-               <Terminal className="w-3 h-3" />
-               <span>bash -- alex_assistant</span>
-             </div>
+            <div className="flex space-x-1.5">
+              <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
+            </div>
+            <div className="ml-3 text-xs font-mono text-zinc-400 flex items-center gap-1">
+              <Terminal className="w-3 h-3" />
+              <span>bash -- deepak_assistant</span>
+            </div>
           </div>
           <Minimize2 onClick={toggleChat} className="w-4 h-4 text-zinc-600 hover:text-zinc-300 cursor-pointer" />
         </div>
@@ -106,11 +104,10 @@ const ChatWidget: React.FC = () => {
               className={`flex flex-col ${msg.sender === Sender.User ? 'items-end' : 'items-start'}`}
             >
               <div
-                className={`max-w-[90%] break-words ${
-                  msg.sender === Sender.User
-                    ? 'text-cyan-300'
-                    : 'text-zinc-300'
-                }`}
+                className={`max-w-[90%] break-words ${msg.sender === Sender.User
+                  ? 'text-cyan-300'
+                  : 'text-zinc-300'
+                  }`}
               >
                 <div className="flex gap-2">
                   <span className="select-none opacity-50 shrink-0">
@@ -121,12 +118,12 @@ const ChatWidget: React.FC = () => {
               </div>
             </div>
           ))}
-          
+
           {isTyping && (
-             <div className="flex items-center gap-2 text-zinc-500">
-                <span className="select-none opacity-50">$</span>
-                <span className="animate-pulse">_</span>
-             </div>
+            <div className="flex items-center gap-2 text-zinc-500">
+              <span className="select-none opacity-50">$</span>
+              <span className="animate-pulse">_</span>
+            </div>
           )}
           <div ref={messagesEndRef} />
         </div>
