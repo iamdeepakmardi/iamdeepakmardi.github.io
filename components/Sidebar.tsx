@@ -1,6 +1,6 @@
 import React from 'react';
 import { HERO_DATA, SOCIAL_LINKS } from '../constants';
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, FileText } from 'lucide-react';
 import LocationCard from './LocationCard';
 
 const Sidebar: React.FC = () => {
@@ -10,6 +10,7 @@ const Sidebar: React.FC = () => {
       case 'linkedin': return <Linkedin className="w-5 h-5" />;
       case 'twitter': return <Twitter className="w-5 h-5" />;
       case 'mail': return <Mail className="w-5 h-5" />;
+      case 'resume': return <FileText className="w-5 h-5" />;
       default: return null;
     }
   };
@@ -28,12 +29,12 @@ const Sidebar: React.FC = () => {
 
         {/* Profile Picture */}
         <div className="relative w-32 h-32 mb-8 group">
-           <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-indigo-500 rounded-full blur-lg opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
-           <img 
-             src={HERO_DATA.avatarUrl} 
-             alt={HERO_DATA.name} 
-             className="relative w-full h-full rounded-full object-cover border-2 border-zinc-800/80 group-hover:border-cyan-400/50 transition-colors duration-300 shadow-2xl" 
-           />
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-indigo-500 rounded-full blur-lg opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
+          <img
+            src={HERO_DATA.avatarUrl}
+            alt={HERO_DATA.name}
+            className="relative w-full h-full rounded-full object-cover border-2 border-zinc-800/80 group-hover:border-cyan-400/50 transition-colors duration-300 shadow-2xl"
+          />
         </div>
 
         <h1 className="text-5xl font-bold tracking-tight text-zinc-100 sm:text-6xl font-sans">
@@ -45,7 +46,7 @@ const Sidebar: React.FC = () => {
         <p className="mt-6 max-w-xs leading-relaxed text-zinc-400 text-base">
           {HERO_DATA.tagline}
         </p>
-        
+
         <LocationCard />
 
         {/* Navigation - Styled as File System */}
@@ -75,7 +76,7 @@ const Sidebar: React.FC = () => {
                 <span className="text-zinc-500 group-hover:text-zinc-200 transition-colors">projects.json</span>
               </a>
             </li>
-             <li>
+            <li>
               <a className="group flex items-center py-2" href="#education">
                 <span className="text-cyan-500 mr-2 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all">./</span>
                 <span className="text-zinc-500 group-hover:text-zinc-200 transition-colors">education.txt</span>
